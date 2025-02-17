@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: meu_postgres_compartilhado
+    restart: always
+    ports:
+      - "5432:5432"  # Expõe a porta do PostgreSQL
+    environment:
+      POSTGRES_USER: projeto_bd_user
+      POSTGRES_PASSWORD: Mfp6abRdmnD9D8utanni0vjdAvObuRUL
+      POSTGRES_DB: projeto_bd
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - rede_compartilhada
+
+networks:
+  rede_compartilhada:
+    driver: bridge
+
+volumes:
+  pgdata:

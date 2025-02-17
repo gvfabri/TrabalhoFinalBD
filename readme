@@ -1,0 +1,8 @@
+
+git clone
+
+docker-compose up
+
+docker run --rm -it postgres:16 psql -h dpg-cup01adds78s738p7oa0-a.ohio-postgres.render.com -U projeto_bd_user projeto_bd
+
+password: Mfp6abRdmnD9D8utanni0vjdAvObuRUL
